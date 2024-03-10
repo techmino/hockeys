@@ -2,88 +2,153 @@
 <html lang="en">
 
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <!-- Daisy and Tailwind cdn link -->
-    <link href="https://cdn.jsdelivr.net/npm/daisyui@4.7.3/dist/full.min.css" rel="stylesheet" type="text/css" />
-    <script src="https://cdn.tailwindcss.com"></script>
-    <!-- fontawesome -->
-    <script src="https://kit.fontawesome.com/0248443645.js" crossorigin="anonymous"></script>
-    <!-- tailwind custom color -->
-    <script>
-        tailwind.config = {
-          theme: {
-            extend: {
-              colors: {
-                clifford: '#da373d',
-              }
-            }
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <!-- Google font manrope -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@200..800&display=swap" rel="stylesheet">
+  <!-- Daisy and Tailwind cdn link -->
+  <link href="https://cdn.jsdelivr.net/npm/daisyui@4.7.3/dist/full.min.css" rel="stylesheet" type="text/css" />
+  <script src="https://cdn.tailwindcss.com"></script>
+  <!-- fontawesome -->
+  <script src="https://kit.fontawesome.com/0248443645.js" crossorigin="anonymous"></script>
+  <!-- tailwind custom color -->
+
+  <!-- local css -->
+  <link rel="stylesheet" href="css/style.css">
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            clifford: '#da373d',
+            'primary-red': '#FF4240',
           }
         }
-      </script>
-    <title>Hockey</title>
+      }
+    }
+  </script>
+
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+    }
+
+    body {
+      font-family: "Manrope", sans-serif;
+    }
+  </style>
+  <title>Hockey</title>
 </head>
 
 <body>
-    <header>
-        <!-- nav part -->
-        <nav>
-            <div class="container mx-auto">
-                <div class="navbar bg-base-100">
-                    <div class="navbar-start w-[65%]">
-                      <div class="dropdown">
-                        <div tabindex="0" role="button" class="btn btn-ghost lg:hidden">
-                          <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h8m-8 6h16" /></svg>
-                        </div>
-                        <ul tabindex="0" class="menu menu-sm dropdown-content mt-3 z-[1] p-2 shadow bg-base-100 rounded-box w-52">
-                          <li><a>Item 1</a></li>
-                          <li>
-                            <a>Parent</a>
-                            <ul class="p-2">
-                              <li><a>Submenu 1</a></li>
-                              <li><a>Submenu 2</a></li>
-                            </ul>
-                          </li>
-                          <li><a>Item 3</a></li>
-                        </ul>
-                      </div>
-                      <a class="btn btn-ghost text-xl">Hockey<span >'</span>s</a>
-                    </div>
-                    <div class="flex lg:flex-auto w-[40%]" >
-                        <div class="navbar-end hidden lg:flex lg:w-[70%]">
-                          <ul class="menu menu-horizontal px-1">
-                            <li><a>Item 1</a></li>
-                            <li>
-                              <details>
-                                <summary>Parent</summary>
-                                <ul class="p-2">
-                                  <li><a>Submenu 1</a></li>
-                                  <li><a>Submenu 2</a></li>
-                                </ul>
-                              </details>
-                            </li>
-                            <li><a>Item 3</a></li>
-                          </ul>
-                        </div>
-                        <div class="navbar-end lg:w-[30%]">
-                          <a class="btn">Get Ticket</a>
-                        </div>
-                    </div>
-                  </div>
+  <header>
+    <!-- nav part -->
+    <nav class="container mx-auto">
+      <div class="navbar bg-base-100">
+        <div class="navbar-start">
+          <div class="dropdown">
+            <div tabindex="0" role="button" class="btn btn-ghost lg:hidden">
+              <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" fill="none" viewBox="0 0 24 24"
+                stroke="currentColor">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h8m-8 6h16" />
+              </svg>
             </div>
-        </nav>
+            <ul tabindex="0" class="menu menu-sm dropdown-content mt-3 z-[1] p-2 shadow bg-base-100 rounded-box w-52">
+              <li class="hover:text-primary-red text-primary-red"><a>Home</a></li>
+              <li class="hover:text-primary-red"><a>About</a></li>
+              <li class="hover:text-primary-red"><a>Pages</a></li>
+              <li class="hover:text-primary-red"><a>Blog</a></li>
+              <li class="hover:text-primary-red"><a>Contact</a></li>
+            </ul>
+          </div>
+          <a class="btn btn-ghost text-xl">Hockey<span class="text-primary-red text-3xl font-extrabold">’</span>s</a>
+        </div>
+        <div class="navbar-center hidden lg:flex">
+          <ul class="menu menu-horizontal px-1">
+            <li class="hover:text-primary-red text-primary-red"><a>Home</a></li>
+            <li class="hover:text-primary-red"><a>About</a></li>
+            <li class="hover:text-primary-red"><a>Pages</a></li>
+            <li class="hover:text-primary-red"><a>Blog</a></li>
+            <li class="hover:text-primary-red"><a>Contact</a></li>
+          </ul>
+        </div>
+        <div class="navbar-end ">
+          <button class="btn btn-ghost btn-circle search">
+            <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" fill="none" viewBox="0 0 24 24"
+              stroke="currentColor">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z" />
+            </svg>
+          </button>
+          <a class="btn bg-primary-red text-white px-6">Button</a>
+        </div>
+      </div>
+    </nav>
+
+    <!-- carousel section -->
+    <section class="hockey-carousel container mx-auto mt-5 h-[300px] ">
+      <div class="carousel h-[550px] ">
+
+        <div id="slide1" class="carousel-item relative w-full">
+          <div class=" text-white bg-black text-3xl absolute bottom-6 md:right-6 p-3 md:w-[30rem] md:h-[6.5rem] mx-5 md:mx-0 rounded-lg">
+            <h3 class="text-2xl">Meet all the heroes from the field</h3>
+            <p class="text-base">Dit amet consectetur. Condimentum dignissim adipiscing aliquam turpis placerat dolor. Purus urna in sit nullam proin. </p>
+
+          </div>
+
+          <img src="Images/1.png" class="w-full z-1" />
+          <div class="absolute flex justify-between transform -translate-y-1/2 left-5 right-5 top-1/2 ">
+            <a href="#slide2" class="btn btn-circle text-white bg-black">❮</a>
+            <a href="#slide3" class="btn btn-circle text-white bg-black">❯</a>
+
+          </div>
+        </div>
+        <div id="slide2" class="carousel-item relative w-full">
+          <div class=" text-white bg-black text-3xl absolute bottom-6 md:right-6 p-3 md:w-[30rem] md:h-[6.5rem] mx-5 md:mx-0 rounded-lg ">
+            <h3 class="text-2xl">Meet all the heroes from the field</h3>
+            <p class="text-base">Dit amet consectetur. Condimentum dignissim adipiscing aliquam turpis placerat dolor. Purus urna in sit nullam proin. </p>
+          </div>
+          <img src="Images/carousel-2.png" class="w-full" />
+          <div class="absolute flex justify-between transform -translate-y-1/2 left-5 right-5 top-1/2">
+            <a href="#slide3" class="btn btn-circle text-white bg-black">❮</a>
+            <a href="#slide1" class="btn btn-circle text-white bg-black">❯</a>
+          </div>
+        </div>
+        <div id="slide3" class="carousel-item relative w-full">
+          <div class=" text-white bg-black text-3xl absolute bottom-6 md:right-6 p-3 md:w-[30rem] md:h-[6.5rem] mx-5 md:mx-0 rounded-lg">
+            <h3 class="text-2xl">Meet all the heroes from the field</h3>
+            <p class="text-base">Dit amet consectetur. Condimentum dignissim adipiscing aliquam turpis placerat dolor. Purus urna in sit nullam proin. </p>
+          </div>
+          <img src="Images/carousel-3.png" class="w-full" />
+          <div class="absolute flex justify-between transform -translate-y-1/2 left-5 right-5 top-1/2">
+            <a href="#slide2" class="btn btn-circle text-white bg-black">❮</a>
+            <a href="#slide1" class="btn btn-circle text-white bg-black">❯</a>
+          </div>
+        </div>
+
+      </div>
+    </section>
 
 
 
-    </header>
-    
-    <main>
 
-    </main>
-    <footer>
 
-    </footer>
-    
+
+
+
+
+  </header>
+
+  <main>
+
+  </main>
+  <footer>
+
+  </footer>
+
 
 </body>
 
